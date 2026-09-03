@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sites pra loja de bairro vender também no online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDEAE2;
+    --ink:#211D17;
+    --ink-soft:#4A443B;
+    --green:#2F5D50;
+    --green-deep:#204238;
+    --ochre:#C97F2A;
+    --line:#D8D2C4;
+    --card:#F6F4EE;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+
+  /* HERO */
+  header{padding:64px 0 48px;border-bottom:1px solid var(--line);}
+  .brand{font-size:15px;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;margin-bottom:40px;}
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(34px, 5.5vw, 54px);
+    line-height:1.08;
+    max-width:12ch;
+    margin-bottom:22px;
+  }
+  .sub{
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:42ch;
+    margin-bottom:32px;
+  }
+  .cta-primary{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--green);
+    color:var(--paper);
+    text-decoration:none;
+    font-weight:600;
+    font-size:16px;
+    padding:14px 24px;
+    border-radius:3px;
+  }
+  .cta-primary:hover{background:var(--green-deep);}
+
+  /* CASES */
+  section{padding:56px 0;border-bottom:1px solid var(--line);}
+  .section-label{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:15px;
+    color:var(--green);
+    margin-bottom:28px;
+  }
+  .case{
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:24px;
+    align-items:center;
+    padding:20px 0;
+    border-top:1px solid var(--line);
+  }
+  .case:first-of-type{border-top:none;}
+  .shot{
+    width:180px;
+    height:120px;
+    border-radius:4px;
+    background:var(--card);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:12px;
+    color:var(--ink-soft);
+    padding:8px;
+    overflow:hidden;
+  }
+  .shot.pending{border:1.5px dashed var(--ink-soft);}
+  .shot img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top;
+    border-radius:4px;
+    display:block;
+  }
+  .case h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:20px;
+    margin-bottom:6px;
+  }
+  .case p{color:var(--ink-soft);font-size:15px;}
+
+  /* HOW IT WORKS */
+  .steps{display:flex;flex-direction:column;gap:0;}
+  .step{
+    display:grid;
+    grid-template-columns:36px 1fr;
+    gap:16px;
+    padding:16px 0;
+    border-top:1px solid var(--line);
+  }
+  .step:first-child{border-top:none;padding-top:0;}
+  .step-n{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:20px;
+    color:var(--ochre);
+  }
+  .step h4{font-size:16px;font-weight:600;margin-bottom:4px;}
+  .step p{color:var(--ink-soft);font-size:15px;}
+
+  /* PRICE */
+  .price-box{
+    background:var(--green);
+    color:var(--paper);
+    border-radius:6px;
+    padding:32px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .price-box .label{font-size:14px;opacity:0.85;margin-bottom:6px;}
+  .price-box .value{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:40px;
+  }
+  .price-box .value span{font-size:16px;font-weight:400;opacity:0.85;}
+  .price-note{font-size:13px;opacity:0.85;max-width:26ch;}
+
+  footer{padding:48px 0 64px;text-align:left;}
+  footer p{color:var(--ink-soft);font-size:14px;margin-bottom:20px;}
+
+  @media (max-width:520px){
+    .case{grid-template-columns:1fr;}
+    .shot{width:100%;}
+    header{padding:48px 0 36px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">Arthur Pereira Bolognesi — desenvolvedor júnior · sites pra comércio local</div>
+    <h1>Loja que tem site bem feito vende mais. A sua ainda não tem.</h1>
+    <p class="sub">Site pronto pra sua loja em poucos dias. Sem mensalidade escondida, sem enrolação técnica — você manda o que quer, eu entrego funcionando.</p>
+    <a class="cta-primary" href="https://wa.me/5511984980872" target="_blank">Chamar no WhatsApp →</a>
+  </header>
+
+  <section>
+    <div class="section-label">Já entreguei pra</div>
+
+    <div class="case">
+      <div class="shot"><img src="vestida-ty.png" alt="Site Vestida de TY"></div>
+      <div>
+        <h3>Vestida de TY</h3>
+        <p>Loja de roupa em Vila Formosa — checkout direto pelo WhatsApp, sem complicação pro cliente.</p>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="shot"><img src="mimos.png" alt="Site Mimos Cestas, Presentes e Flores"></div>
+      <div>
+        <h3>Mimos Cestas, Presentes e Flores</h3>
+        <p>Loja de presentes em Capão do Embira — catálogo visual pra facilitar decisão de compra.</p>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="shot"><img src="vortex-store.png" alt="Site Vortex Store"></div>
+      <div>
+        <h3>Vortex Store</h3>
+        <p>E-commerce de tecnologia e áudio — catálogo completo, frete grátis configurado e checkout pronto pra vender.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">Como funciona</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div>
+          <h4>Você me manda o básico</h4>
+          <p>Nome da loja, o que vende, fotos que já tiver, contato. Sem burocracia.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div>
+          <h4>Eu monto e te mostro</h4>
+          <p>Site pronto em poucos dias, você vê antes de publicar.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div>
+          <h4>Publica e já pode divulgar</h4>
+          <p>No ar, com link pra colocar no Instagram, cartão, WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">Investimento</div>
+    <div class="price-box">
+      <div>
+        <div class="label">A partir de</div>
+        <div class="value">R$ 500 <span>setup único</span></div>
+      </div>
+      <div class="price-note">Sem contrato de fidelidade. Se quiser manutenção depois, a gente combina à parte.</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Prefere chamar direto? Me manda mensagem e a gente conversa sobre a sua loja.</p>
+    <a class="cta-primary" href="https://wa.me/5511984980872" target="_blank">Chamar no WhatsApp →</a>
+  </footer>
+
+</div>
+</body>
+</html>
