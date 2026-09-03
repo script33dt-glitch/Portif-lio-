@@ -8,38 +8,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#EDEAE2;
-    --ink:#211D17;
-    --ink-soft:#4A443B;
-    --green:#2F5D50;
-    --green-deep:#204238;
-    --ochre:#C97F2A;
-    --line:#D8D2C4;
-    --card:#F6F4EE;
+    --paper:#121212;
+    --ink:#F3F1EA;
+    --ink-soft:#B9B5AB;
+    --green:#39FF88;
+    --green-deep:#2BDD73;
+    --green-text:#08170F;
+    --ochre:#E8A33D;
+    --line:#2C2C2A;
+    --card:#1B1B19;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
+  html{font-size:17px;}
   body{
     background:var(--paper);
     color:var(--ink);
     font-family:'IBM Plex Sans', sans-serif;
-    line-height:1.5;
+    line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
 
   /* HERO */
   header{padding:64px 0 48px;border-bottom:1px solid var(--line);}
-  .brand{font-size:15px;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;margin-bottom:40px;}
+  .brand{font-size:16px;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;margin-bottom:40px;}
   h1{
     font-family:'Fraunces', serif;
     font-weight:600;
-    font-size:clamp(34px, 5.5vw, 54px);
-    line-height:1.08;
+    font-size:clamp(36px, 6vw, 56px);
+    line-height:1.1;
     max-width:12ch;
     margin-bottom:22px;
   }
   .sub{
-    font-size:18px;
+    font-size:19px;
     color:var(--ink-soft);
     max-width:42ch;
     margin-bottom:32px;
@@ -49,12 +51,13 @@
     align-items:center;
     gap:8px;
     background:var(--green);
-    color:var(--paper);
+    color:var(--green-text);
     text-decoration:none;
     font-weight:600;
-    font-size:16px;
+    font-size:17px;
     padding:14px 24px;
     border-radius:3px;
+    box-shadow:0 0 18px rgba(57,255,136,0.35);
   }
   .cta-primary:hover{background:var(--green-deep);}
 
@@ -63,7 +66,7 @@
   .section-label{
     font-family:'Fraunces', serif;
     font-style:italic;
-    font-size:15px;
+    font-size:16px;
     color:var(--green);
     margin-bottom:28px;
   }
@@ -85,7 +88,7 @@
     align-items:center;
     justify-content:center;
     text-align:center;
-    font-size:12px;
+    font-size:13px;
     color:var(--ink-soft);
     padding:8px;
     overflow:hidden;
@@ -102,10 +105,10 @@
   .case h3{
     font-family:'Fraunces', serif;
     font-weight:600;
-    font-size:20px;
+    font-size:22px;
     margin-bottom:6px;
   }
-  .case p{color:var(--ink-soft);font-size:15px;}
+  .case p{color:var(--ink-soft);font-size:16.5px;}
 
   /* HOW IT WORKS */
   .steps{display:flex;flex-direction:column;gap:0;}
@@ -120,16 +123,16 @@
   .step-n{
     font-family:'Fraunces', serif;
     font-style:italic;
-    font-size:20px;
+    font-size:21px;
     color:var(--ochre);
   }
-  .step h4{font-size:16px;font-weight:600;margin-bottom:4px;}
-  .step p{color:var(--ink-soft);font-size:15px;}
+  .step h4{font-size:17px;font-weight:600;margin-bottom:4px;}
+  .step p{color:var(--ink-soft);font-size:16.5px;}
 
   /* PRICE */
   .price-box{
     background:var(--green);
-    color:var(--paper);
+    color:var(--green-text);
     border-radius:6px;
     padding:32px;
     display:flex;
@@ -137,23 +140,33 @@
     align-items:flex-end;
     flex-wrap:wrap;
     gap:20px;
+    box-shadow:0 0 24px rgba(57,255,136,0.25);
   }
-  .price-box .label{font-size:14px;opacity:0.85;margin-bottom:6px;}
+  .price-box .label{font-size:15px;opacity:0.85;margin-bottom:6px;}
   .price-box .value{
     font-family:'Fraunces', serif;
     font-weight:700;
-    font-size:40px;
+    font-size:44px;
   }
-  .price-box .value span{font-size:16px;font-weight:400;opacity:0.85;}
-  .price-note{font-size:13px;opacity:0.85;max-width:26ch;}
+  .price-box .value span{font-size:17px;font-weight:400;opacity:0.85;}
+  .price-note{font-size:14.5px;opacity:0.9;max-width:26ch;}
 
   footer{padding:48px 0 64px;text-align:left;}
-  footer p{color:var(--ink-soft);font-size:14px;margin-bottom:20px;}
+  footer p{color:var(--ink-soft);font-size:15.5px;margin-bottom:20px;}
+
+  @media (max-width:768px){
+    html{font-size:18px;}
+    .sub{font-size:19px;}
+    .case p, .step p{font-size:17px;}
+  }
 
   @media (max-width:520px){
+    html{font-size:18px;}
     .case{grid-template-columns:1fr;}
     .shot{width:100%;}
     header{padding:48px 0 36px;}
+    h1{font-size:clamp(32px, 9vw, 42px);max-width:none;}
+    .sub{font-size:18px;}
   }
 </style>
 </head>
