@@ -130,26 +130,56 @@
   .step p{color:var(--ink-soft);font-size:16.5px;}
 
   /* PRICE */
-  .price-box{
-    background:var(--green);
-    color:var(--green-text);
+  .price-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+  }
+  .price-card{
+    background:var(--card);
+    border:1px solid var(--line);
     border-radius:6px;
-    padding:32px;
+    padding:24px 20px;
     display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    flex-wrap:wrap;
-    gap:20px;
+    flex-direction:column;
+    gap:10px;
+  }
+  .price-card.featured{
+    background:var(--green);
+    border-color:var(--green);
     box-shadow:0 0 24px rgba(57,255,136,0.25);
   }
-  .price-box .label{font-size:15px;opacity:0.85;margin-bottom:6px;}
-  .price-box .value{
+  .price-card .label{font-size:14.5px;color:var(--ink-soft);}
+  .price-card.featured .label{color:var(--green-text);opacity:0.85;}
+  .price-card .value{
     font-family:'Fraunces', serif;
     font-weight:700;
-    font-size:44px;
+    font-size:34px;
+    color:var(--ink);
   }
-  .price-box .value span{font-size:17px;font-weight:400;opacity:0.85;}
-  .price-note{font-size:14.5px;opacity:0.9;max-width:26ch;}
+  .price-card.featured .value{color:var(--green-text);}
+  .price-card .value span{font-size:15px;font-weight:400;opacity:0.85;}
+  .price-card .desc{font-size:15px;color:var(--ink-soft);line-height:1.45;}
+  .price-card.featured .desc{color:var(--green-text);opacity:0.9;}
+  .price-note{font-size:14.5px;color:var(--ink-soft);margin-top:18px;max-width:50ch;}
+
+  @media (max-width:640px){
+    .price-grid{grid-template-columns:1fr;}
+  }
+
+  /* TERMS */
+  .terms{
+    font-size:15px;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
+  .terms li{margin-bottom:10px;list-style:none;padding-left:22px;position:relative;}
+  .terms li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--ochre);
+  }
 
   footer{padding:48px 0 64px;text-align:left;}
   footer p{color:var(--ink-soft);font-size:15.5px;margin-bottom:20px;}
@@ -237,13 +267,35 @@
 
   <section>
     <div class="section-label">Investimento</div>
-    <div class="price-box">
-      <div>
-        <div class="label">A partir de</div>
-        <div class="value">R$ 500 <span>setup único</span></div>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="label">Básico</div>
+        <div class="value">R$ 500</div>
+        <div class="desc">Site completo em HTML, CSS e JavaScript. Domínio fica por sua conta.</div>
       </div>
-      <div class="price-note">Sem contrato de fidelidade. Se quiser manutenção depois, a gente combina à parte.</div>
+      <div class="price-card featured">
+        <div class="label">Com ajuda pro domínio</div>
+        <div class="value">R$ 600</div>
+        <div class="desc">Site completo, mais eu te oriento passo a passo pra comprar o domínio certo.</div>
+      </div>
+      <div class="price-card">
+        <div class="label">Completo</div>
+        <div class="value">R$ 1000</div>
+        <div class="desc">Site completo. Eu cuido de toda a parte técnica do domínio pra você, do início ao fim.</div>
+      </div>
     </div>
+    <p class="price-note">Sem contrato de fidelidade. Se quiser manutenção depois, a gente combina à parte.</p>
+  </section>
+
+  <section>
+    <div class="section-label">O que está incluso</div>
+    <ul class="terms">
+      <li>No plano de R$ 500, a entrega é só o site (HTML, CSS e JavaScript). Domínio, hospedagem e qualquer configuração técnica ficam por conta do cliente.</li>
+      <li>No plano de R$ 600, além do site, eu te oriento passo a passo pra comprar o domínio. A configuração final continua por conta do cliente.</li>
+      <li>No plano de R$ 1000, eu cuido de toda a parte técnica do domínio pra você, incluindo a compra e a configuração.</li>
+      <li>Ajustes, manutenção ou suporte depois da entrega não estão inclusos em nenhum plano e são combinados à parte.</li>
+      <li>Esses termos valem a partir da confirmação do pedido pelo WhatsApp.</li>
+    </ul>
   </section>
 
   <footer>
