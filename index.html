@@ -31,7 +31,21 @@
 
   /* HERO */
   header{padding:64px 0 48px;border-bottom:1px solid var(--line);}
-  .brand{font-size:16px;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;margin-bottom:40px;}
+  .hero-top{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:40px;
+  }
+  .avatar{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid var(--green);
+    flex-shrink:0;
+  }
+  .brand{font-size:16px;font-weight:600;color:var(--ink-soft);letter-spacing:0.02em;}
   h1{
     font-family:'Fraunces', serif;
     font-weight:600;
@@ -57,9 +71,16 @@
     font-size:17px;
     padding:14px 24px;
     border-radius:3px;
-    box-shadow:0 0 18px rgba(57,255,136,0.35);
+    box-shadow:0 0 0 0 rgba(57,255,136,0.55);
+    animation:wa-pulse 2.4s infinite;
   }
   .cta-primary:hover{background:var(--green-deep);}
+
+  @keyframes wa-pulse{
+    0%{box-shadow:0 0 0 0 rgba(57,255,136,0.45);}
+    70%{box-shadow:0 0 0 14px rgba(57,255,136,0);}
+    100%{box-shadow:0 0 0 0 rgba(57,255,136,0);}
+  }
 
   /* CASES */
   section{padding:56px 0;border-bottom:1px solid var(--line);}
@@ -79,6 +100,8 @@
     border-top:1px solid var(--line);
   }
   .case:first-of-type{border-top:none;}
+  .case:nth-of-type(even){grid-template-columns:1fr 180px;}
+  .case:nth-of-type(even) .shot{order:2;}
   .shot{
     width:180px;
     height:120px;
@@ -204,7 +227,10 @@
 <div class="wrap">
 
   <header>
-    <div class="brand">Arthur Pereira Bolognesi — desenvolvedor júnior · sites pra comércio local</div>
+    <div class="hero-top">
+      <img class="avatar" src="foto-perfil.png" alt="Foto de Arthur Pereira Bolognesi">
+      <div class="brand">Arthur Pereira Bolognesi — desenvolvedor júnior · sites pra comércio local</div>
+    </div>
     <h1>Loja que tem site bem feito vende mais. A sua ainda não tem.</h1>
     <p class="sub">Site pronto pra sua loja em poucos dias. Sem mensalidade escondida, sem enrolação técnica — você manda o que quer, eu entrego funcionando.</p>
     <a class="cta-primary" href="https://wa.me/5511984980872" target="_blank">Chamar no WhatsApp →</a>
