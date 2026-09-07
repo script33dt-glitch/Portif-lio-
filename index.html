@@ -8,15 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#121212;
-    --ink:#F3F1EA;
-    --ink-soft:#B9B5AB;
-    --green:#39FF88;
-    --green-deep:#2BDD73;
-    --green-text:#08170F;
-    --ochre:#E8A33D;
-    --line:#2C2C2A;
-    --card:#1B1B19;
+    --paper:#0A0F1E;
+    --ink:#F1F3F8;
+    --ink-soft:#9AA3B8;
+    --green:#4FC3F7;
+    --green-deep:#2BA9E0;
+    --green-text:#04121F;
+    --ochre:#7C9CD9;
+    --line:#1E2740;
+    --card:#111731;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{font-size:17px;}
@@ -72,15 +72,15 @@
     font-size:17px;
     padding:14px 24px;
     border-radius:3px;
-    box-shadow:0 0 0 0 rgba(57,255,136,0.55);
+    box-shadow:0 0 0 0 rgba(79,195,247,0.55);
     animation:wa-pulse 2.4s infinite;
   }
   .cta-primary:hover{background:var(--green-deep);}
 
   @keyframes wa-pulse{
-    0%{box-shadow:0 0 0 0 rgba(57,255,136,0.45);}
-    70%{box-shadow:0 0 0 14px rgba(57,255,136,0);}
-    100%{box-shadow:0 0 0 0 rgba(57,255,136,0);}
+    0%{box-shadow:0 0 0 0 rgba(79,195,247,0.45);}
+    70%{box-shadow:0 0 0 14px rgba(79,195,247,0);}
+    100%{box-shadow:0 0 0 0 rgba(79,195,247,0);}
   }
 
   /* CASES */
@@ -171,7 +171,7 @@
   .price-card.featured{
     background:var(--green);
     border-color:var(--green);
-    box-shadow:0 0 24px rgba(57,255,136,0.25);
+    box-shadow:0 0 24px rgba(79,195,247,0.25);
   }
   .price-card .label{font-size:14.5px;color:var(--ink-soft);}
   .price-card.featured .label{color:var(--green-text);opacity:0.85;}
@@ -269,6 +269,14 @@
       <div>
         <h3>Carta pra Xuxu</h3>
         <p>Site sob encomenda pra apresentação de poema — tipografia e estética do site feitas do zero em HTML e CSS.</p>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="shot"><img src="confeitaria-juliana.png" alt="Site Confeitaria da Juliana"></div>
+      <div>
+        <h3>Confeitaria da Juliana</h3>
+        <p>Confeitaria artesanal de bolos, tortas e doces — site com cardápio visual e pedido direto pelo WhatsApp.</p>
       </div>
     </div>
   </section>
